@@ -1,7 +1,7 @@
-package com.inventory.LogicComponent.users;
+package com.inventory.inventory.users;
 
-import com.inventory.entity.Person;
-import com.inventory.repository.User.IUserRepository;
+import com.inventory.inventory.entity.Person;
+import com.inventory.inventory.User.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

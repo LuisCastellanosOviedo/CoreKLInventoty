@@ -7,9 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
-@ComponentScan
-@EnableAutoConfiguration
-@Configuration
 public class InventoryApplication {
 
 	public static void main(String[] args) {

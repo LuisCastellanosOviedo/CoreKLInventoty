@@ -1,4 +1,4 @@
-package com.inventory.entity;
+package com.inventory.inventory.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

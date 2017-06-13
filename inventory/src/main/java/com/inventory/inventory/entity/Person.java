@@ -1,4 +1,4 @@
-package com.inventory.entity;
+package com.inventory.inventory.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +21,7 @@ public class Person {
     private String lastName;
     private String userName;
     private String passwd;
-    private List<Role> userRoles;
+  //  private List<Role> userRoles;
 
 
     public Person(Long idPerson, String name, String lastName, String userName, String passwd) {

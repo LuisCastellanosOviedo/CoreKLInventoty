@@ -1,9 +1,8 @@
-package com.inventory.restController;
+package com.inventory.inventory.restController;
 
-import com.inventory.controller.LoginController;
-import com.inventory.entity.Person;
+import com.inventory.inventory.controller.LoginController;
+import com.inventory.inventory.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 
-//@RestController
+@RestController
 public class RestControllerLogin {
 
-  /*  private LoginController loginController;
+   private LoginController loginController;
 
     @Autowired
     public RestControllerLogin(LoginController loginController) {
@@ -28,9 +27,9 @@ public class RestControllerLogin {
     @RequestMapping(value = "/{user}",method = RequestMethod.GET)
     public String findperson(@PathVariable("user") String id, Model model){
 
-        Person  person = loginController.findById(Long.parseLong(id));
+        Person person = loginController.findById(Long.parseLong(id));
 
 
         return "continue";
-    }*/
+    }
 }

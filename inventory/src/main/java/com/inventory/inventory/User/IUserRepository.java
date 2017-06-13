@@ -1,6 +1,6 @@
-package com.inventory.repository.User;
+package com.inventory.inventory.User;
 
-import com.inventory.entity.Person;
+import com.inventory.inventory.entity.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
