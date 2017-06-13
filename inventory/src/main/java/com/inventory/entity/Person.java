@@ -1,11 +1,10 @@
 package com.inventory.entity;
 
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 /**
  * Created by luis on 6/12/2017.
@@ -22,7 +21,7 @@ public class Person {
     private String lastName;
     private String userName;
     private String passwd;
-
+    private List<Role> userRoles;
 
 
     public Person(Long idPerson, String name, String lastName, String userName, String passwd) {
