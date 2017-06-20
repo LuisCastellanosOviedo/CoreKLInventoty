@@ -1,15 +1,15 @@
 package com.inventory.inventory.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by luis on 6/12/2017.
  */
 @Entity
+@NamedQuery(
+        name = "Person.isAuthenticated", query = "select p from Person p where p.userName = :userName and p.passwd = :passwd"
+)
 public class Person {
 
 
@@ -23,6 +23,9 @@ public class Person {
     private String passwd;
   //  private List<Role> userRoles;
 
+
+    public Person() {
+    }
 
     public Person(Long idPerson, String name, String lastName, String userName, String passwd) {
         this.idPerson = idPerson;

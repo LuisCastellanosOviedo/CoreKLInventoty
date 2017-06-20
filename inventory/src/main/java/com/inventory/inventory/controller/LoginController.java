@@ -20,8 +20,8 @@ public class LoginController
         this.userComponent = userComponent;
     }
 
-    public Person findById(Long id){
-        return userComponent.findById(id);
+    public boolean isAuthenticated(String userName,String passwd){
+        return userComponent.isAuthenticated(userName,passwd).size()>0;
     }
 
 
