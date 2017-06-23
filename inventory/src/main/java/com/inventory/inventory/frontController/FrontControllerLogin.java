@@ -33,9 +33,9 @@ public class FrontControllerLogin {
     @RequestMapping(value="/login",method = RequestMethod.POST)
     public String login( @ModelAttribute(value="Person") Person person,Model model){
        if( loginController.isAuthenticated(person.getUserName(),person.getPasswd())){
-           return "index";
+           return "taskSelector";
        }else{
-           return "index";
+           return "taskSelector";
        }
 
     }
