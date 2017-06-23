@@ -3,6 +3,7 @@ package com.inventory.inventory.controller;
 import com.inventory.inventory.users.UserComponent;
 import com.inventory.inventory.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -20,8 +21,8 @@ public class LoginController
         this.userComponent = userComponent;
     }
 
-    public boolean isAuthenticated(String userName,String passwd){
-        return userComponent.isAuthenticated(userName,passwd).size()>0;
+    public boolean isAuthenticated(String userName2,String passwd2){
+        return userComponent.isAuthenticated(userName2,passwd2).size()>0;
     }
 
 

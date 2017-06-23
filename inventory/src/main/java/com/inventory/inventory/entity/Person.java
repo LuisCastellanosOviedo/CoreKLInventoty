@@ -8,7 +8,7 @@ import java.util.List;
  */
 @Entity
 @NamedQuery(
-        name = "Person.isAuthenticated", query = "select p from Person p where p.userName = :userName and p.passwd = :passwd"
+        name = "Person.isAuthenticated", query = "select p from Person p where p.userName = :userName2 and p.passwd = :passwd2"
 )
 public class Person {
 

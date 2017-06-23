@@ -2,6 +2,7 @@ package com.inventory.inventory.User;
 
 import com.inventory.inventory.entity.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -10,5 +11,5 @@ import java.util.List;
  */
 public interface IUserRepository extends JpaRepository<Person,Long> {
 
-    List<Person> isAuthenticated(String userName, String passws);
+    List<Person> isAuthenticated(@Param("userName2") String userName,@Param("passwd2") String passws);
 }
