@@ -1,7 +1,7 @@
-package com.inventory.inventory.users;
+package com.inventory.inventory.persistence.repository.User;
 
-import com.inventory.inventory.entity.Person;
-import com.inventory.inventory.User.IUserRepository;
+import com.inventory.inventory.persistence.entity.user.Person;
+import com.inventory.inventory.persistence.repository.User.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,12 +11,12 @@ import java.util.List;
  * Created by luis on 6/13/2017.
  */
 @Component
-public class UserComponent {
+public class UserRepositoryDefault {
 
     private IUserRepository userRepository;
 
     @Autowired
-    public UserComponent(IUserRepository userRepository) {
+    public UserRepositoryDefault(IUserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
