@@ -1,10 +1,21 @@
 package com.inventory.inventory.persistence.entity.proveedor;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by LuisCO on 7/01/2018.
  */
+
+@Entity
 public class Proveedor {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long idProveedor;
     private String name;
     private String contactName;
     private String email;
@@ -15,13 +26,22 @@ public class Proveedor {
     public Proveedor() {
     }
 
-    public Proveedor(String name, String contactName, String email, String phone, String address, String website) {
+    public Proveedor(Long idProveedor, String name, String contactName, String email, String phone, String address, String website) {
+        this.idProveedor = idProveedor;
         this.name = name;
         this.contactName = contactName;
         this.email = email;
         this.phone = phone;
         this.address = address;
         this.website = website;
+    }
+
+    public Long getIdProveedor() {
+        return idProveedor;
+    }
+
+    public void setIdProveedor(Long idProveedor) {
+        this.idProveedor = idProveedor;
     }
 
     public String getName() {
