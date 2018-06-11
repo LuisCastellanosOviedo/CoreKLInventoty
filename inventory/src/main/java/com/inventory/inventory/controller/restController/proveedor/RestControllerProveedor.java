@@ -1,7 +1,10 @@
 package com.inventory.inventory.controller.restController.proveedor;
 
+import com.inventory.inventory.dto.ProveedorDTO;
 import com.inventory.inventory.persistence.entity.proveedor.Proveedor;
 import com.inventory.inventory.persistence.entity.user.Person;
+import com.inventory.inventory.services.proveedor.ProveedorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,6 +21,8 @@ public class RestControllerProveedor {
 
 
 
+    @Autowired
+    ProveedorService proveedorService;
 
     @RequestMapping(method = RequestMethod.GET)
     public String  findperson(Model model){
@@ -27,8 +32,9 @@ public class RestControllerProveedor {
 
 
     @RequestMapping(method = RequestMethod.POST)
-    public String saveProveedor(@ModelAttribute(value = "Proveedor")Proveedor proveedor, Model model){
-        model.addAttribute("Proveedor",new Proveedor());
+    public String saveProveedor(@ModelAttribute(value = "ProveedorDTO")ProveedorDTO proveedorDTO, Model model){
+        proveedorService.save(proveedorDTO);
+
         return "taskSelector";
     }
 

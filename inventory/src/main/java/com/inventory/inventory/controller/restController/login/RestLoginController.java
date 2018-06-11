@@ -1,5 +1,6 @@
 package com.inventory.inventory.controller.restController.login;
 
+import com.inventory.inventory.dto.ProveedorDTO;
 import com.inventory.inventory.persistence.entity.proveedor.Proveedor;
 import com.inventory.inventory.persistence.entity.user.Person;
 import com.inventory.inventory.services.LoginServiceController;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class RestLoginController {
 
-   private LoginServiceController loginController;
+    private LoginServiceController loginController;
 
     @Autowired
     public RestLoginController(LoginServiceController loginController) {
@@ -33,11 +34,17 @@ public class RestLoginController {
         return "index";
     }
 
+    @RequestMapping(value = "/",method = RequestMethod.POST)
+    public String save(Model model){
+        model.addAttribute("Person",new Person());
+
+        return "index";
+    }
 
     @RequestMapping(value="/login",method = RequestMethod.POST)
     public String login( @ModelAttribute(value="Person") Person person,Model model){
-        model.addAttribute("Proveedor",new Proveedor());
-      return loginController.isAuthenticated(person.getUserName(),person.getPasswd())?"taskSelector":"taskSelector";
+        model.addAttribute("Proveedor",new ProveedorDTO());
+        return loginController.isAuthenticated(person.getUserName(),person.getPasswd())?"taskSelector":"taskSelector";
     }
 
 
