@@ -13,19 +13,11 @@ public class ProveedorDA {
     @Autowired
     private IProveedorRepository proveedorRepository;
 
-
     @Autowired
     ProveedorMapper proveedorMapper;
 
-
     public long save(ProveedorDTO proveedorDTO){
-
-
-
         Proveedor proveedor =  proveedorMapper.mapDtoToEntity(proveedorDTO);
-
-
         return    proveedorRepository.save(proveedor).getIdProveedor();
-
     }
 }

@@ -14,13 +14,12 @@ import javax.persistence.Id;
 /**
  * Created by LuisCO on 7/01/2018.
  */
-
-@Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
+@Entity
 public class Proveedor {
 
 

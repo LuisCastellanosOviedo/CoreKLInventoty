@@ -6,10 +6,10 @@ import com.inventory.inventory.persistence.entity.proveedor.Proveedor;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.springframework.stereotype.Component;
 
-@Mapper
-public abstract class ProveedorMapper {
+
+@Mapper(componentModel = "spring")
+public interface ProveedorMapper {
 
     @Mappings({
             @Mapping(target = "name", source = "name"),
@@ -19,5 +19,6 @@ public abstract class ProveedorMapper {
             @Mapping(target = "address", source = "address"),
             @Mapping(target = "website", source = "website")
     })
-  public abstract Proveedor mapDtoToEntity(ProveedorDTO proveedorDTO);
+    Proveedor mapDtoToEntity(ProveedorDTO proveedorDTO);
 }
+
